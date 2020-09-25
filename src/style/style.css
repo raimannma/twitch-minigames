@@ -1,0 +1,92 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 20vh;
+  text-align: center;
+}
+
+form {
+  font-size: 26px;
+  font-weight: bold;
+  margin-top: 2vh;
+  height: 10vh;
+}
+
+form input {
+  width: 500px;
+  height: 4vh;
+  font-size: 20px;
+  max-width: 94vw;
+  margin: 0 3vw;
+  padding: 0 1vw;
+}
+
+button {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 24px;
+  margin: 0 0 0 100px;
+  border-radius: 4px;
+  background-color: #2ecc71;
+  border: none;
+  width: 200px;
+  transition: all 0.5s;
+}
+
+button:disabled {
+  background: #95a5a6;
+}
+
+button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+button:enabled:hover span {
+  padding-right: 25px;
+}
+
+button:enabled:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+article {
+  display: flex;
+  height: 80vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gamebox {
+  width: 400px;
+  margin: 5vh 5vw;
+  padding: 1vw;
+  max-width: 90vw;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.gamebox h2 {
+  margin-bottom: 10px;
+}
