@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <meta charset="utf-8" />
+
+    <title>Becherspiel</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <h1>Becherspiel</h1>
+      <h2>
+        Zum Mitspielen einfach die Nummer des Bechers in den Chat schreiben.
+      </h2>
+    </header>
+    <div class="game-container">
+      <div id="numbers">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+      </div>
+      <div id="names">
+        <span id="names1"></span>
+        <span id="names2"></span>
+        <span id="names3"></span>
+      </div>
+      <div class="ballincup-game">
+        <div class="cups-box">
+          <div id="cup1" class="cup cup-1"></div>
+          <div id="cup2" class="cup cup-2"></div>
+          <div id="cup3" class="cup cup-3"></div>
+          <div id="ball"></div>
+        </div>
+      </div>
+
+      <button id="btnStart">START</button>
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+  </body>
+</html>
