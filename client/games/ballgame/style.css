@@ -1,0 +1,121 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  outline: none;
+  background-color: #2ecc71;
+}
+
+header {
+  width: 100vw;
+  height: 10vh;
+  background: #95a5a6;
+  text-align: center;
+}
+
+header h1 {
+  background: transparent;
+  line-height: 6vh;
+}
+
+header h2 {
+  background: transparent;
+  line-height: 4vh;
+}
+
+.game-container {
+  width: 100vw;
+  height: 50vh;
+  padding-top: 5vh;
+  padding-bottom: 20vh;
+  background-repeat: repeat;
+  color: #fff;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.ballincup-game {
+  position: relative;
+  width: 100vw;
+  height: 40vh;
+}
+
+.cups-box {
+  position: absolute;
+  width: 788px;
+  height: 100%;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.cup {
+  position: absolute;
+  width: 196px;
+  height: 286px;
+  background-image: url(./resources/cup.png);
+  background-repeat: no-repeat;
+  top: 50px;
+}
+.cup-2 {
+  left: 296px;
+}
+.cup-3 {
+  left: 592px;
+}
+
+#names {
+  width: 100vw;
+  height: 20vh;
+  justify-content: space-around;
+  display: flex;
+  font-size: 16pt;
+  margin-bottom: 7vh;
+}
+#names span {
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 30vw;
+  padding: 2vh 0;
+}
+
+#numbers {
+  width: 100vw;
+  height: 10vh;
+  justify-content: space-around;
+  display: flex;
+}
+
+#numbers span {
+  font-size: 40pt;
+  height: 10vh;
+}
+
+#ball {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-image: url(./resources/ball.png);
+  background-repeat: no-repeat;
+  left: calc(50vw - 120px);
+  top: 350px;
+}
+
+#btnStart {
+  cursor: pointer;
+  height: 40px;
+  width: 90%;
+  max-width: 250px;
+  border: 0;
+  background-color: #9d9d9d;
+  font-size: 1.571em;
+  line-height: 1.8em;
+  font-weight: 700;
+  color: #fff;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  margin-bottom: 50px;
+}

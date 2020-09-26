@@ -3,25 +3,24 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "tsc --build --clean && tsc && copyfiles -e **/*.ts -u 1 src/**/* public",
-    "start": "npm run build && node ./bin/www",
-    "test": "prettier --check src/",
-    "dev": "nodemon --watch src -e ts,ejs,html,css,png,jpg,js --exec npm run build"
+    "build": "tsc --build --clean && tsc && copyfiles -e **/*.ts -u 1 client/**/* build/client&& copyfiles -e **/*.ts -u 1 server/**/* build/server",
+    "start": "npm run build && node server.js",
+    "test": "prettier --check client/ --check server.js",
+    "dev": "nodemon --watch client --watch server -e ts,ejs,html,css,png,jpg,js --exec npm run start"
   },
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "morgan": "~1.9.1"
+    "twitch-auth": "^4.2.4",
+    "twitch-chat-client": "^4.2.4",
+    "express": "^4.17.1",
+    "typescript": "^4.0.3",
+    "socket.io": "^2.3.0",
+    "copyfiles": "^2.3.0"
   },
   "devDependencies": {
-    "copyfiles": "^2.3.0",
-    "easy-livereload": "^1.4.3",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
     "nodemon": "^2.0.4",
-    "prettier": "2.1.2",
-    "typescript": "^4.0.3"
+    "prettier": "2.1.2"
   },
   "husky": {
     "hooks": {
@@ -29,6 +28,6 @@
     }
   },
   "lint-staged": {
-    "*.{js,css,md}": "prettier --write src/"
+    "*.{html,ts,tsx,js}": "prettier --write client/ --write server.js"
   }
 }

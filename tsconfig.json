@@ -5,12 +5,13 @@
     "target": "es6",
     "noImplicitAny": true,
     "moduleResolution": "node",
-    "sourceMap": false,
-    "outDir": "public",
+    "sourceMap": true,
+    "outDir": "build/client/",
+    "allowJs": true,
     "baseUrl": "./",
     "paths": {
       "*": ["node_modules/*"]
     }
   },
-  "include": ["src/"]
+  "include": ["client/"]
 }
