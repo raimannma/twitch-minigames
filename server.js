@@ -5,6 +5,8 @@ const io = require("socket.io")(http);
 const { ChatClient } = require("twitch-chat-client");
 const { StaticAuthProvider } = require("twitch-auth");
 const fs = require("fs");
+const PORT = 3000;
+const HOST_NAME = "0.0.0.0";
 
 let contents = fs.readFileSync("tokens", "utf8");
 let [clientID, accessToken] = contents.trim().split(",");
@@ -19,12 +21,13 @@ app.get("/", (req, res) => {
 
 io.on("connection", (socket) => {
   socket.on("twitch_channel", (msg) => {
-    chatClient = new ChatClient(auth, { channels: [msg] });
+    const channel = msg;
+    chatClient = new ChatClient(auth, { channels: [channel] });
     chatClient.connect().then(() => {
       socket.emit("twitch_connection", "Twitch Chat Client verbunden!");
     });
     socket.on("chat_reply", (msg) => {
-      chatClient.say("jasminaxrose", msg);
+      chatClient.say(channel, msg);
     });
     chatClient.onMessage((channel, user, message) => {
       socket.emit("chat_message", user + ":" + message);
@@ -32,6 +35,6 @@ io.on("connection", (socket) => {
   });
 });
 
-http.listen(3000, () => {
-  console.log("listening on localhost:3000");
+http.listen(PORT, HOST_NAME, () => {
+  console.log(`Server running at http://${HOST_NAME}:${PORT}/`);
 });
