@@ -5,6 +5,7 @@
   "scripts": {
     "build": "tsc --build --clean && tsc && copyfiles -e **/*.ts -u 1 src/**/* public",
     "start": "npm run build && node ./bin/www",
+    "test": "prettier --check src/",
     "dev": "nodemon --watch src -e ts,ejs,html,css,png,jpg,js --exec npm run build"
   },
   "dependencies": {
