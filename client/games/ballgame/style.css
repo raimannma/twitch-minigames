@@ -100,7 +100,7 @@ header h2 {
   height: 120px;
   background-image: url(./resources/ball.png);
   background-repeat: no-repeat;
-  left: calc(50vw - 120px);
+  left: calc(50% - 60px);
   top: 350px;
 }
 
