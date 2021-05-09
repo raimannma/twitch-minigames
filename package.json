@@ -11,7 +11,7 @@
   "dependencies": {
     "copyfiles": "^2.4.1",
     "express": "^4.17.1",
-    "socket.io": "^4.0.1",
+    "socket.io": "^4.0.2",
     "twitch": "^4.5.5",
     "twitch-auth": "^4.5.5",
     "twitch-chat-client": "^4.5.5",
