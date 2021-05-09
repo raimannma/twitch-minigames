@@ -6,16 +6,3 @@ updates:
     interval: daily
     time: "04:00"
   open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: twitch
-    versions:
-    - 4.4.13
-    - 4.5.3
-  - dependency-name: twitch-auth
-    versions:
-    - 4.4.11
-    - 4.4.12
-    - 4.4.13
-  - dependency-name: twitch-chat-client
-    versions:
-    - 4.4.13
