@@ -15,7 +15,7 @@
     "twitch": "^4.6.0",
     "twitch-auth": "^4.6.0",
     "twitch-chat-client": "^4.6.0",
-    "typescript": "^4.3.4"
+    "typescript": "^4.3.5"
   },
   "devDependencies": {
     "husky": "^6.0.0",
