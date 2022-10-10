@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "copyfiles": "^2.4.1",
-    "express": "^4.18.1",
+    "express": "^4.18.2",
     "socket.io": "^4.5.1",
     "twitch": "^4.6.7",
     "twitch-auth": "^4.6.7",
